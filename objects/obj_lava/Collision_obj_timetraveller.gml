@@ -1,0 +1,1 @@
+obj_timetraveller.hasTouchedLava = true;
