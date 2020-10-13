@@ -23,6 +23,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"parent":{"name":"obj_walls","path":"objects/obj_walls/obj_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"parent":{"name":"obj_walls","path":"objects/obj_walls/obj_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"parent":{"name":"obj_walls","path":"objects/obj_walls/obj_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

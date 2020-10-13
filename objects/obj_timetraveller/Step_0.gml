@@ -24,3 +24,16 @@ if(place_meeting(x,y, obj_angrypuff))
 	/// @DnDParent : 28F8561D
 	instance_destroy();
 }
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 1D22B783
+/// @DnDArgument : "expr" "place_meeting(x,y, obj_bosspuff)"
+if(place_meeting(x,y, obj_bosspuff))
+{
+	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 70C298F0
+	/// @DnDParent : 1D22B783
+	instance_destroy();
+}

@@ -27,14 +27,14 @@ else
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 37DD7EBC
-/// @DnDArgument : "expr" "switchCount > 2"
-if(switchCount > 2)
+/// @DnDArgument : "expr" "switchCount > countLimit"
+if(switchCount > countLimit)
 {
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 191E472F
 	/// @DnDParent : 37DD7EBC
-	/// @DnDArgument : "expr" "2"
+	/// @DnDArgument : "expr" "countLimit"
 	/// @DnDArgument : "var" "switchCount"
-	switchCount = 2;
+	switchCount = countLimit;
 }

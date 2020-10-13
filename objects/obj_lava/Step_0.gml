@@ -8,9 +8,9 @@ if(place_meeting(x,y,obj_timetraveller))
 	/// @DnDVersion : 1
 	/// @DnDHash : 717C0AA6
 	/// @DnDParent : 79D62316
-	/// @DnDArgument : "expr" "place_meeting(x,y,obj_box)"
+	/// @DnDArgument : "expr" "place_meeting(x,y,obj_box) || place_meeting(x,y,obj_unrewindablebox) "
 	/// @DnDArgument : "not" "1"
-	if(!(place_meeting(x,y,obj_box)))
+	if(!(place_meeting(x,y,obj_box) || place_meeting(x,y,obj_unrewindablebox) ))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
