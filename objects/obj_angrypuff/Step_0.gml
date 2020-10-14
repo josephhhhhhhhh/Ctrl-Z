@@ -1,8 +1,8 @@
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 4CE8DABD
-/// @DnDArgument : "expr" "place_meeting(x + 32 ,y, obj_walls) || place_meeting(x+32,y,obj_angrypuff) || place_meeting(x - 32 ,y, obj_walls) || place_meeting(x - 32 ,y, obj_angrypuff) "
-if(place_meeting(x + 32 ,y, obj_walls) || place_meeting(x+32,y,obj_angrypuff) || place_meeting(x - 32 ,y, obj_walls) || place_meeting(x - 32 ,y, obj_angrypuff) )
+/// @DnDArgument : "expr" "place_meeting(x + 32 ,y, obj_walls) || place_meeting(x+32,y,obj_angrypuff) || place_meeting(x - 32 ,y, obj_walls) || place_meeting(x - 32 ,y, obj_angrypuff)  "
+if(place_meeting(x + 32 ,y, obj_walls) || place_meeting(x+32,y,obj_angrypuff) || place_meeting(x - 32 ,y, obj_walls) || place_meeting(x - 32 ,y, obj_angrypuff)  )
 {
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -11,6 +11,30 @@ if(place_meeting(x + 32 ,y, obj_walls) || place_meeting(x+32,y,obj_angrypuff) ||
 	/// @DnDArgument : "expr" "dir*-1"
 	/// @DnDArgument : "var" "dir"
 	dir = dir*-1;
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 55E056BC
+/// @DnDArgument : "expr" "canWalkThroughDoors"
+/// @DnDArgument : "not" "1"
+if(!(canWalkThroughDoors))
+{
+	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 7F60F216
+	/// @DnDParent : 55E056BC
+	/// @DnDArgument : "expr" " place_meeting(x - 32 ,y, obj_door) || place_meeting(x + 32 ,y, obj_door)"
+	if( place_meeting(x - 32 ,y, obj_door) || place_meeting(x + 32 ,y, obj_door))
+	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 1135153A
+		/// @DnDParent : 7F60F216
+		/// @DnDArgument : "expr" "dir*-1"
+		/// @DnDArgument : "var" "dir"
+		dir = dir*-1;
+	}
 }
 
 /// @DnDAction : YoYo Games.Common.If_Expression

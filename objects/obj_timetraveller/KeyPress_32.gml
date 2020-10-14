@@ -16,9 +16,12 @@ for(i=0;i<instance_number(obj_angrypuff);i++){
 }
 
 if(!instance_exists(obj_keythatopensall)&&instance_exists(obj_trackKey)){
-	var inst;
-	inst = instance_create_layer(obj_trackKey.keyX, obj_trackKey.keyY, "Instances",obj_keythatopensall);
-	obj_door.keythatopensallishere = false;
+	if(obj_trackKey.keyUsedCount>0){
+		var inst;
+		inst = instance_create_layer(obj_trackKey.keyX, obj_trackKey.keyY, "Instances",obj_keythatopensall);
+		obj_door.keythatopensallishere = false;
+		obj_trackKey.keyUsedCount = obj_trackKey.keyUsedCount - 1;
+	}
 }
 if(instance_exists(obj_cannonlever)){
 	if(!obj_cannonlever.projectileready){

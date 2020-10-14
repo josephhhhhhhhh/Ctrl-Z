@@ -18,3 +18,9 @@ keyY = obj_keythatopensall.ystart;
 /// @DnDArgument : "expr" "obj_keythatopensall.id"
 /// @DnDArgument : "var" "keyID"
 keyID = obj_keythatopensall.id;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 7870D63A
+/// @DnDArgument : "var" "keyUsedCount"
+keyUsedCount = 0;

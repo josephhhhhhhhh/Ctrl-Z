@@ -39,9 +39,17 @@ if(pickedUpByTimeTraveller)
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 6FB2FA0A
-/// @DnDArgument : "expr" "place_meeting(x,y,obj_unrewindabledoor) "
-if(place_meeting(x,y,obj_unrewindabledoor) )
+/// @DnDArgument : "expr" "place_meeting(x,y,obj_unrewindabledoor)  && obj_unrewindabledoor.doorClosed"
+if(place_meeting(x,y,obj_unrewindabledoor)  && obj_unrewindabledoor.doorClosed)
 {
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 553F6A86
+	/// @DnDParent : 6FB2FA0A
+	/// @DnDArgument : "expr" "obj_trackKey.keyUsedCount+1"
+	/// @DnDArgument : "var" "obj_trackKey.keyUsedCount"
+	obj_trackKey.keyUsedCount = obj_trackKey.keyUsedCount+1;
+
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 600811DA
@@ -60,9 +68,17 @@ if(place_meeting(x,y,obj_unrewindabledoor) )
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 0D2ACA21
-/// @DnDArgument : "expr" "place_meeting(x,y,obj_door) "
-if(place_meeting(x,y,obj_door) )
+/// @DnDArgument : "expr" "place_meeting(x,y,obj_door) && obj_door.doorClosed"
+if(place_meeting(x,y,obj_door) && obj_door.doorClosed)
 {
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 46C0BB64
+	/// @DnDParent : 0D2ACA21
+	/// @DnDArgument : "expr" "obj_trackKey.keyUsedCount+1"
+	/// @DnDArgument : "var" "obj_trackKey.keyUsedCount"
+	obj_trackKey.keyUsedCount = obj_trackKey.keyUsedCount+1;
+
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 0B12C5C4

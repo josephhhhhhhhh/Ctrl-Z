@@ -29,6 +29,7 @@
     {"isDnD":false,"eventNum":32,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":82,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":3,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hasTouchedLava","tags":[],"resourceType":"GMObjectProperty",},
