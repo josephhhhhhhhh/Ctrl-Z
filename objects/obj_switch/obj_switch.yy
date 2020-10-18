@@ -21,7 +21,6 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"parent":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":69,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},

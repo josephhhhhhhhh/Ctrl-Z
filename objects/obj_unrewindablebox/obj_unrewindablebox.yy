@@ -22,6 +22,9 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_endportal","path":"objects/obj_endportal/obj_endportal.yy",},"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

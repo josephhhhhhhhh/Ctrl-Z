@@ -3,7 +3,7 @@
     "name": "spr_endportal",
     "path": "sprites/spr_endportal/spr_endportal.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
