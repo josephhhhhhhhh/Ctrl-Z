@@ -28,6 +28,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"walkspeed","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"objectId":{"name":"obj_angrypuff","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"canWalkThroughDoors","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"objectId":{"name":"obj_angrypuff","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"value":"true","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"shootTears","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"objectId":{"name":"obj_angrypuff","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Objects",

@@ -19,10 +19,9 @@ if(!place_meeting(x, y+collisionSpeed,obj_walls) && !place_meeting(x, y+collisio
 	/// @DnDAction : YoYo Games.Instances.Sprite_Rotate
 	/// @DnDVersion : 1
 	/// @DnDHash : 4C59C9B1
-	/// @DnDDisabled : 1
 	/// @DnDParent : 2B475CC3
 	/// @DnDArgument : "angle" "180"
-
+	image_angle = 180;
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 3005F779
-/// @DnDArgument : "var" "place_meeting(x, y, obj_timetraveller)"
+/// @DnDArgument : "var" "place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetraveller) "
 /// @DnDArgument : "value" "true"
-if(place_meeting(x, y, obj_timetraveller) == true)
+if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetraveller)  == true)
 {
 	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
 	/// @DnDVersion : 1
@@ -188,9 +188,16 @@ if(place_meeting(x, y, obj_timetraveller) == true)
 				/// @DnDVersion : 1
 				/// @DnDHash : 6D487C72
 				/// @DnDParent : 10B59A1E
-				/// @DnDArgument : "expr" "position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_walls) ) || position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_door))"
-				if(position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_walls) ) || position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_door)))
+				/// @DnDArgument : "expr" "position_meeting(x+sprite_width/2+1,y, instance_position(x+sprite_width/2+1,y,obj_walls) ) || position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_door))"
+				if(position_meeting(x+sprite_width/2+1,y, instance_position(x+sprite_width/2+1,y,obj_walls) ) || position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_door)))
 				{
+					/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
+					/// @DnDVersion : 1
+					/// @DnDHash : 71B5758E
+					/// @DnDParent : 6D487C72
+					/// @DnDArgument : "msg" ""on the left of ubox""
+					show_debug_message(string("on the left of ubox"));
+				
 					/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 7FC92125

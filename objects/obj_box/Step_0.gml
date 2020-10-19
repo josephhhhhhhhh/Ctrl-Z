@@ -5,6 +5,13 @@
 /// @DnDArgument : "value" "true"
 if(place_meeting(x, y, obj_timetraveller) == true)
 {
+	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
+	/// @DnDVersion : 1
+	/// @DnDHash : 035D43A8
+	/// @DnDParent : 1B200F24
+	/// @DnDArgument : "msg" ""contact box""
+	show_debug_message(string("contact box"));
+
 	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
 	/// @DnDVersion : 1
 	/// @DnDHash : 6E472596

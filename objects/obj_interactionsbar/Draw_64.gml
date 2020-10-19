@@ -1,11 +1,18 @@
+/// @DnDAction : YoYo Games.Drawing.Set_Font
+/// @DnDVersion : 1
+/// @DnDHash : 3960D749
+/// @DnDArgument : "font" "Font_cambria"
+/// @DnDSaveInfo : "font" "Font_cambria"
+draw_set_font(Font_cambria);
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 16CDE52F
-/// @DnDArgument : "x" "890"
+/// @DnDArgument : "x" "855"
 /// @DnDArgument : "y" "725"
-/// @DnDArgument : "caption" ""Switch Count: ""
+/// @DnDArgument : "caption" ""Time Reversals left: ""
 /// @DnDArgument : "var" "obj_switch.switchCount"
-draw_text(890, 725, string("Switch Count: ") + string(obj_switch.switchCount));
+draw_text(855, 725, string("Time Reversals left: ") + string(obj_switch.switchCount));
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 /// @DnDVersion : 1
