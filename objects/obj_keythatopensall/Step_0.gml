@@ -58,6 +58,14 @@ if(place_meeting(x,y,obj_unrewindabledoor)  && obj_unrewindabledoor.doorClosed)
 	/// @DnDArgument : "var" "obj_unrewindabledoor.keythatopensallishere"
 	obj_unrewindabledoor.keythatopensallishere = true;
 
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 7B4B159B
+	/// @DnDParent : 6FB2FA0A
+	/// @DnDArgument : "expr" "obj_timetraveller.currentInteractionCount+1"
+	/// @DnDArgument : "var" "obj_timetraveller.currentInteractionCount"
+	obj_timetraveller.currentInteractionCount = obj_timetraveller.currentInteractionCount+1;
+
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 758C02D5
@@ -86,6 +94,14 @@ if(place_meeting(x,y,obj_door) && obj_door.doorClosed)
 	/// @DnDArgument : "expr" "true"
 	/// @DnDArgument : "var" "obj_door.keythatopensallishere"
 	obj_door.keythatopensallishere = true;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 3A9DD211
+	/// @DnDParent : 0D2ACA21
+	/// @DnDArgument : "expr" "obj_timetraveller.currentInteractionCount+1"
+	/// @DnDArgument : "var" "obj_timetraveller.currentInteractionCount"
+	obj_timetraveller.currentInteractionCount = obj_timetraveller.currentInteractionCount+1;
 
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1

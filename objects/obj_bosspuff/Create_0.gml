@@ -11,3 +11,15 @@ xdir = -1;
 /// @DnDArgument : "expr" "1"
 /// @DnDArgument : "var" "ydir"
 ydir = 1;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 446A33F0
+/// @DnDArgument : "var" "spookyMode"
+spookyMode = 0;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 51D8E101
+/// @DnDArgument : "var" "i"
+i = 0;

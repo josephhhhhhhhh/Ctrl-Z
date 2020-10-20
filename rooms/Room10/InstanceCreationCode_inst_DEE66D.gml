@@ -1,1 +1,1 @@
-countLimit = 3;
+countLimit = 2;

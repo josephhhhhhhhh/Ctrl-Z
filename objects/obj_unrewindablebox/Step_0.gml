@@ -9,10 +9,10 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 	/// @DnDVersion : 1
 	/// @DnDHash : 6DC67580
 	/// @DnDParent : 3005F779
-	/// @DnDArgument : "key" "ord("E")"
+	/// @DnDArgument : "key" "ord("E") && passthrough"
 	/// @DnDArgument : "not" "1"
 	var l6DC67580_0;
-	l6DC67580_0 = keyboard_check(ord("E"));
+	l6DC67580_0 = keyboard_check(ord("E") && passthrough);
 	if (!l6DC67580_0)
 	{
 		/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
@@ -64,6 +64,22 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 				
 				}
 			}
+		}
+	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 19B66C56
+		/// @DnDParent : 6DC67580
+		/// @DnDArgument : "expr" "position_meeting(x,y,obj_lava)"
+		if(position_meeting(x,y,obj_lava))
+		{
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 4E5C1335
+			/// @DnDParent : 19B66C56
+			/// @DnDArgument : "expr" "true"
+			/// @DnDArgument : "var" "passthrough"
+			passthrough = true;
 		}
 	
 		/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down

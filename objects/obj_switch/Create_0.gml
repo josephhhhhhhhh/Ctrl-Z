@@ -1,5 +1,12 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
+/// @DnDHash : 224258EB
+/// @DnDArgument : "expr" "false"
+/// @DnDArgument : "var" "switchPressed"
+switchPressed = false;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
 /// @DnDHash : 692895B6
 /// @DnDArgument : "expr" "false"
 /// @DnDArgument : "var" "obj_switch.isTriggered"
