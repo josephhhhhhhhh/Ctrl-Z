@@ -160,8 +160,8 @@ if(instance_exists(obj_pressureplate))
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 7D95C086
-/// @DnDArgument : "expr" "startWithMove"
-if(startWithMove)
+/// @DnDArgument : "expr" "startWithMove || alternateOn"
+if(startWithMove || alternateOn)
 {
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

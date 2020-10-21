@@ -151,3 +151,18 @@ if((place_meeting(x,y,obj_box) || place_meeting(x,y,obj_unrewindablebox)) && !st
 	/// @DnDArgument : "msg" ""eyyyy""
 	show_debug_message(string("eyyyy"));
 }
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 05B51272
+/// @DnDArgument : "expr" "!isTriggered && instance_exists(obj_angrypuff)"
+if(!isTriggered && instance_exists(obj_angrypuff))
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 760E75BB
+	/// @DnDParent : 05B51272
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "obj_angrypuff.alternateOn"
+	obj_angrypuff.alternateOn = true;
+}

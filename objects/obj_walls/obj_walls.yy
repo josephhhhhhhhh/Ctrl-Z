@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_walls",
-    "path": "sprites/spr_walls/spr_walls.yy",
+    "name": "spr_wall",
+    "path": "sprites/spr_wall/spr_wall.yy",
   },
   "solid": true,
   "visible": true,
@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_walls",
