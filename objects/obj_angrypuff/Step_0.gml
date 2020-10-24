@@ -39,6 +39,72 @@ if(shootTears)
 		    {
 		     direction = other.directionFaced;
 		    }
+	
+		/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDVersion : 1
+		/// @DnDHash : 7CBA2D59
+		/// @DnDParent : 29B1D615
+		/// @DnDArgument : "xpos" "x"
+		/// @DnDArgument : "ypos" "y"
+		/// @DnDArgument : "var" "tempTear1"
+		/// @DnDArgument : "var_temp" "1"
+		/// @DnDArgument : "objectid" "obj_teardrop"
+		/// @DnDSaveInfo : "objectid" "obj_teardrop"
+		var tempTear1 = instance_create_layer(x, y, "Instances", obj_teardrop);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 2AC4360C
+		/// @DnDParent : 29B1D615
+		/// @DnDArgument : "code" "with (tempTear1)$(13_10)    {$(13_10)     direction = other.directionFaced + 90;$(13_10)    }"
+		with (tempTear1)
+		    {
+		     direction = other.directionFaced + 90;
+		    }
+	
+		/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDVersion : 1
+		/// @DnDHash : 721A6EF8
+		/// @DnDParent : 29B1D615
+		/// @DnDArgument : "xpos" "x"
+		/// @DnDArgument : "ypos" "y"
+		/// @DnDArgument : "var" "tempTear2"
+		/// @DnDArgument : "var_temp" "1"
+		/// @DnDArgument : "objectid" "obj_teardrop"
+		/// @DnDSaveInfo : "objectid" "obj_teardrop"
+		var tempTear2 = instance_create_layer(x, y, "Instances", obj_teardrop);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 0C89032D
+		/// @DnDParent : 29B1D615
+		/// @DnDArgument : "code" "with (tempTear2)$(13_10)    {$(13_10)     direction = other.directionFaced + 180;$(13_10)    }"
+		with (tempTear2)
+		    {
+		     direction = other.directionFaced + 180;
+		    }
+	
+		/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDVersion : 1
+		/// @DnDHash : 03CAFC29
+		/// @DnDParent : 29B1D615
+		/// @DnDArgument : "xpos" "x"
+		/// @DnDArgument : "ypos" "y"
+		/// @DnDArgument : "var" "tempTear3"
+		/// @DnDArgument : "var_temp" "1"
+		/// @DnDArgument : "objectid" "obj_teardrop"
+		/// @DnDSaveInfo : "objectid" "obj_teardrop"
+		var tempTear3 = instance_create_layer(x, y, "Instances", obj_teardrop);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 1AC8DFDE
+		/// @DnDParent : 29B1D615
+		/// @DnDArgument : "code" "with (tempTear3)$(13_10)    {$(13_10)     direction = other.directionFaced + 270;$(13_10)    }"
+		with (tempTear3)
+		    {
+		     direction = other.directionFaced + 270;
+		    }
 	}
 }
 

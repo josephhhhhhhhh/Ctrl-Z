@@ -93,9 +93,10 @@ if(instance_exists(obj_pressureplate))
 		/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 		/// @DnDVersion : 1
 		/// @DnDHash : 752F19A9
+		/// @DnDDisabled : 1
 		/// @DnDParent : 5E7494E7
 		/// @DnDArgument : "msg" ""moved""
-		show_debug_message(string("moved"));
+	
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
@@ -107,9 +108,10 @@ if(instance_exists(obj_pressureplate))
 			/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 			/// @DnDVersion : 1
 			/// @DnDHash : 4B2F2C74
+			/// @DnDDisabled : 1
 			/// @DnDParent : 5989C6A5
 			/// @DnDArgument : "msg" ""ppdone""
-			show_debug_message(string("ppdone"));
+		
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -118,6 +120,22 @@ if(instance_exists(obj_pressureplate))
 			/// @DnDArgument : "expr" "currentInteractionCount+obj_pressureplate.boxCount"
 			/// @DnDArgument : "var" "currentInteractionCount"
 			currentInteractionCount = currentInteractionCount+obj_pressureplate.boxCount;
+		
+			/// @DnDAction : YoYo Games.Common.If_Expression
+			/// @DnDVersion : 1
+			/// @DnDHash : 2F8FC037
+			/// @DnDParent : 5989C6A5
+			/// @DnDArgument : "expr" "currentInteractionCount > maxInteractionCount"
+			if(currentInteractionCount > maxInteractionCount)
+			{
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 23A193B6
+				/// @DnDParent : 2F8FC037
+				/// @DnDArgument : "expr" "maxInteractionCount"
+				/// @DnDArgument : "var" "currentInteractionCount"
+				currentInteractionCount = maxInteractionCount;
+			}
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -151,6 +169,22 @@ if(instance_exists(obj_switch))
 		/// @DnDArgument : "var" "currentInteractionCount"
 		currentInteractionCount = currentInteractionCount + 1;
 	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 796D9561
+		/// @DnDParent : 19489E8A
+		/// @DnDArgument : "expr" "currentInteractionCount > maxInteractionCount"
+		if(currentInteractionCount > maxInteractionCount)
+		{
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 73AE4DD3
+			/// @DnDParent : 796D9561
+			/// @DnDArgument : "expr" "maxInteractionCount"
+			/// @DnDArgument : "var" "currentInteractionCount"
+			currentInteractionCount = maxInteractionCount;
+		}
+	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 0015C618
@@ -162,9 +196,9 @@ if(instance_exists(obj_switch))
 		/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 		/// @DnDVersion : 1
 		/// @DnDHash : 1DAF3ADB
+		/// @DnDDisabled : 1
 		/// @DnDParent : 19489E8A
 		/// @DnDArgument : "msg" ""plus one anyhow""
-		show_debug_message(string("plus one anyhow"));
 	}
 }
 

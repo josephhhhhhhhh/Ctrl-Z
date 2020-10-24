@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 61D4C7DB
-/// @DnDArgument : "expr" "3"
+/// @DnDArgument : "expr" "4"
 /// @DnDArgument : "var" "unrewindableboxspeed"
-unrewindableboxspeed = 3;
+unrewindableboxspeed = 4;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

@@ -1,10 +1,13 @@
 //time reverse
+show_debug_message("Current switch count: " + string(obj_switch.switchCount));
 if(obj_timetraveller.currentInteractionCount){
 	
 	if(instance_exists(obj_switch)){
 		if(obj_switch.switchCount > 0){
 			obj_switch.isTriggered = !obj_switch.isTriggered;
-			obj_switch.switchCount-=1;
+			obj_switch.switchCount-= 1;
+			show_debug_message("switch count minus 1");
+			
 		}
 	}
 	if(instance_exists(obj_pressureplate)){
@@ -14,8 +17,13 @@ if(obj_timetraveller.currentInteractionCount){
 		}
 		if(obj_pressureplate.boxCount == 1){
 			if instance_exists(obj_switch){
-				obj_pressureplate.boxCount -=1;
+				obj_pressureplate.boxCount=1;
 				obj_switch.switchCount += 1;
+			}
+		}
+		if(instance_exists(obj_unrewindablebox) && obj_pressureplate.boxCount == 1){
+			if instance_exists(obj_switch){
+				obj_switch.switchCount -= 1;
 			}
 		}
 	}

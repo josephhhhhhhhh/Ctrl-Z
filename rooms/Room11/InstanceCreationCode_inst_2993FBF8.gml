@@ -1,2 +1,2 @@
-maptargetX = 1186;
-maptargetY = 578;
+maptargetX = 1287;
+maptargetY = 661;

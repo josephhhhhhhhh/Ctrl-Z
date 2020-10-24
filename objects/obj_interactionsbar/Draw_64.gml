@@ -35,3 +35,12 @@ draw_healthbar(1055, 725, 1310, 745, (obj_timetraveller.currentInteractionCount/
 /// @DnDArgument : "caption" ""Time taken: ""
 /// @DnDArgument : "var" "timekeeper/60"
 draw_text(500, 725, string("Time taken: ") + string(timekeeper/60));
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDVersion : 1
+/// @DnDHash : 7E36CACF
+/// @DnDArgument : "x" "200"
+/// @DnDArgument : "y" "725"
+/// @DnDArgument : "caption" ""Points Collected: ""
+/// @DnDArgument : "var" "(60 -timekeeper/60)*100 + obj_timetraveller.pointsCollected*1000"
+draw_text(200, 725, string("Points Collected: ") + string((60 -timekeeper/60)*100 + obj_timetraveller.pointsCollected*1000));
