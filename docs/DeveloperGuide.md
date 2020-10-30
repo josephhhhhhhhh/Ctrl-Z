@@ -44,18 +44,17 @@ Understand more about E-Duke-8, and how you can use it to aid your learning, thr
 Data will be automatically loaded from the files in the **data** folder for use in quizzes and notes.
 You will see this message while the data loads:
 
-![data loading](./images/data_loading.png)
 
 To ensure that data could be loaded successfully, ensure that the data folder that comes along with the eduke8.jar file is placed in the same folder as eduke8.jar. This is part of the setup and is to be done prior to the running of the app. 
 If the data has been loaded successfully you should see this message:
 
-![data loaded](./images/data_loaded.png)
+
 
 ### 3.2. Welcome Page
 
 Upon successful startup, you should be greeted with a screen like this:
 
-![welcome](./images/welcome.png)
+
 
 ### 3.3. Viewing E-Duke-8 information: `about`
 
@@ -68,7 +67,6 @@ about
 
 What you should see:
 
-![about](./images/about.png)
 
 
 ### 3.4. Viewing available commands: `help`
@@ -82,7 +80,7 @@ help
 
 What you should see:
 
-![help](./images/help.png)
+
 
 
 ### 3.5. Listing all topics: `topics`
@@ -98,8 +96,6 @@ topics
 
 What you should see:
 
-![topics](./images/topics.png)
-
 
 ### 3.6. Accessing the CS2113T textbook content: `textbook`
 
@@ -112,7 +108,7 @@ textbook
 
 What you should see:
 
-![textbook](./images/textbook.png)
+
 
 
 ### 3.7. Starting a quiz: `quiz`
@@ -142,7 +138,6 @@ quiz t/OOP n/5
 
 What you should see:
 
-![quiz](./images/quiz.png)
 
 From here on you can either:
 
@@ -171,8 +166,6 @@ hint
 ```
 
 What you should see:
-
-![hint](./images/hint.png)
 
 
 ### 3.9. Adding a note: `note add`
@@ -221,13 +214,11 @@ stats
 
 If you are a new user, this is what you should see:
 
-![stats_no_progress](./images/stats_No_Progress.png)
 
 If you have attempted the quizzes on E-Duke-8, you would be able to see your own stats. 
 
 This is an example of what you should see:
 
-![stats_with_progress](./images/stats_Some_Progress.png)
 
 
 ### 3.13. Exiting the program: `exit`
@@ -242,18 +233,17 @@ exit
 ```
 
 
-![exit](./images/exit.png)
+
 
 ### 3.14. Saving user data
 
 User data will only be saved upon successful exit of the application through the `exit` command.
 You will see this message while the data saves:
 
-![data saving](./images/data_saving.png)
 
 If the data has been saved successfully you should see this message:
 
-![data saved](./images/data_saved.png)
+
 
 This is store in the `user.json` file in the `data` folder and can be transferred between machines to keep your own history.
 
