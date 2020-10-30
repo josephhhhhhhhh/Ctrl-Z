@@ -1,6 +1,31 @@
 # User Guide for E-Duke-8
 * Table of Contents
 {:toc}
+Table of contents:
+- [User Guide for E-Duke-8](#user-guide-for-e-duke-8)
+  - [1. Introduction](#1-introduction)
+  - [2. Quick Start](#2-quick-start)
+  - [3. Features](#3-features)
+    - [3.1. Loading Data](#31-loading-data)
+    - [3.2. Welcome Page](#32-welcome-page)
+    - [3.3. Viewing E-Duke-8 information: `about`](#33-viewing-e-duke-8-information-about)
+    - [3.4. Viewing available commands: `help`](#34-viewing-available-commands-help)
+    - [3.5. Listing all topics: `topics`](#35-listing-all-topics-topics)
+    - [3.6. Accessing the CS2113T textbook content: `textbook`](#36-accessing-the-cs2113t-textbook-content-textbook)
+    - [3.7. Starting a quiz: `quiz`](#37-starting-a-quiz-quiz)
+    - [3.8. Showing a hint: `hint`](#38-showing-a-hint-hint)
+    - [3.9. Adding a bookmark: `bookmark`](#39-showing-a-hint-hint)
+    - [3.10. Adding a note: `note add`](#310-adding-a-note-note-add)
+    - [3.11. Deleting a note: `note delete`](#311-deleting-a-note-note-delete)
+    - [3.12. Listing out notes: `note list`](#312-listing-out-notes-note-list)
+    - [3.13. Displaying stats: `stats`](#313-displaying-stats-stats)
+    - [3.14. Exiting the program: `exit`](#314-exiting-the-program-exit)
+    - [3.15. Saving user data](#315-saving-user-data)
+  - [4. FAQ](#4-faq)
+  - [5. Command summary](#5-command-summary)
+  - [6. Glossary](#6-glossary)
+        - [1. Command Line Interface (CLI)](#1-command-line-interface-cli)
+        - [2. Object-oriented Programming (OOP)](#2-object-oriented-programming-oop)
 
 ## 1. Introduction
 
