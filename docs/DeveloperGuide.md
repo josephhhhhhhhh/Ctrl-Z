@@ -1,6 +1,5 @@
 # User Guide for E-Duke-8
-* Table of Contents
-{:toc}
+
 Table of contents:
 - [User Guide for E-Duke-8](#user-guide-for-e-duke-8)
   - [1. Introduction](#1-introduction)
