@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_angrypuff",
-    "path": "sprites/spr_angrypuff/spr_angrypuff.yy",
+    "name": "spr_Angry_Puff_Right",
+    "path": "sprites/spr_Angry_Puff_Right/spr_Angry_Puff_Right.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_angrypuff","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_angrypuff","path":"objects/obj_angrypuff/obj_angrypuff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":3,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemystartsmoving","tags":[],"resourceType":"GMObjectProperty",},
@@ -37,8 +37,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_angrypuff",

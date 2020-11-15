@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_wall_outercorner",
-    "path": "sprites/spr_wall_outercorner/spr_wall_outercorner.yy",
+    "name": "spr_wallcornerinteriors",
+    "path": "sprites/spr_wallcornerinteriors/spr_wallcornerinteriors.yy",
   },
   "solid": true,
   "visible": true,

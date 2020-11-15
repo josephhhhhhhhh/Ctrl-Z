@@ -1,13 +1,29 @@
+if (global.pause) exit;
 //time reverse
-show_debug_message("Current switch count: " + string(obj_switch.switchCount));
+
+
 if(obj_timetraveller.currentInteractionCount){
+	audio_play_sound(ES_Ascend_Rewind___SFX_Producer_new, 1, false);
+	repeat(100)
+    {
+    var xx = x + random_range(-900,900);
+    var yy = y + random_range(-500,500);
+    part_particles_create(global.P_System, xx, yy, global.Particle1, 1);
+    }
 	
 	if(instance_exists(obj_switch)){
 		if(obj_switch.switchCount > 0){
 			obj_switch.isTriggered = !obj_switch.isTriggered;
-			obj_switch.switchCount-= 1;
-			show_debug_message("switch count minus 1");
-			
+			obj_switch.switchCount-=1;
+			obj_switch.activatedByTouch = false;
+			obj_switch.activatedByRewind = true;
+			if(instance_exists(obj_door)){
+				audio_play_sound(Door_Open_new,1,false);
+			}
+			if(instance_exists(obj_portalblocker) || instance_exists(obj_portalblockerBoth)){
+				audio_play_sound(Door_Open_new,1,false);
+			}
+			show_debug_message("triggered reversal");
 		}
 	}
 	if(instance_exists(obj_pressureplate)){
@@ -17,24 +33,33 @@ if(obj_timetraveller.currentInteractionCount){
 		}
 		if(obj_pressureplate.boxCount == 1){
 			if instance_exists(obj_switch){
-				obj_pressureplate.boxCount=1;
 				obj_switch.switchCount += 1;
+				show_debug_message("this happened!!" + string(obj_switch.switchCount));
 			}
 		}
-		if(instance_exists(obj_unrewindablebox) && obj_pressureplate.boxCount == 1){
+		if(instance_exists(obj_unrewindablebox) && obj_pressureplate.isTriggered && obj_pressureplate.boxCount == 1){
 			if instance_exists(obj_switch){
 				obj_switch.switchCount -= 1;
+				show_debug_message("then this happened!!");
 			}
 		}
 	}
 	
 	if(instance_exists(obj_box)){
-		obj_box.x = obj_box.xstart;
-		obj_box.y = obj_box.ystart;
+		for(i=0;i<instance_number(obj_box);i++){
+		obox = instance_find(obj_box, i);
+			obox.x = obox.xstart;
+			obox.y = obox.ystart;
+		}
 	}
 	
 	for(i=0;i<instance_number(obj_angrypuff);i++){
 		ap = instance_find(obj_angrypuff, i);
+		ap.x = ap.xstart;
+		ap.y = ap.ystart;
+	}
+	for(i=0;i<instance_number(obj_circlingangrypuff);i++){
+		ap = instance_find(obj_circlingangrypuff, i);
 		ap.x = ap.xstart;
 		ap.y = ap.ystart;
 	}
@@ -54,26 +79,24 @@ if(obj_timetraveller.currentInteractionCount){
 		if(instance_exists(inst_540298E6)){
 			if(!inst_540298E6.projectileready){
 				inst_540298E6.projectileready = true;
-				inst_540298E6.image_angle = inst_540298E6.startAngle+90;
 			}
 		}
 		if(instance_exists(inst_16A8EF39)){
 			if(!inst_16A8EF39.projectileready){
 				inst_16A8EF39.projectileready = true;
-				inst_16A8EF39.image_angle = inst_16A8EF39.startAngle+90;
 			}
 		}
 		if(instance_exists(inst_35C616A1)){
 			if(!inst_35C616A1.projectileready){
 				inst_35C616A1.projectileready = true;
-				inst_35C616A1.image_angle = inst_35C616A1.startAngle+90;
 			}
 		}
 	}
-	obj_timetraveller.currentInteractionCount -= 1;
+	if(instance_exists(obj_teardrop)){
+		instance_destroy(obj_teardrop);
+	}
+	if(instance_exists(obj_cannonbadproj)){
+		instance_destroy(obj_cannonbadproj);
+	}
+	currentInteractionCount--;
 }
-//obj_angrypuff.x = obj_angrypuff.xstart;
-//obj_angrypuff.y = obj_angrypuff.ystart;
-//idea for saving intermediary states: 
-//1) create counter; counter=0 2) When next state comes, save positions of things that need to be returned, 
-//	so counter++;

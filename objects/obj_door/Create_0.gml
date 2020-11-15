@@ -46,14 +46,7 @@ if(instance_exists(obj_switch))
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 18E1F13A
-/// @DnDArgument : "expr" "true"
-/// @DnDArgument : "var" "doorClosed"
-doorClosed = true;
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
 /// @DnDHash : 05B0CAA8
+/// @DnDDisabled : 1
 /// @DnDArgument : "expr" "image_angle"
 /// @DnDArgument : "var" "startAngle"
-startAngle = image_angle;

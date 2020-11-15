@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_newgamebutton",
-    "path": "sprites/spr_newgamebutton/spr_newgamebutton.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

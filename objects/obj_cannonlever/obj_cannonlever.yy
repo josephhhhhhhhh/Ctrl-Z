@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_cannonlever",
-    "path": "sprites/spr_cannonlever/spr_cannonlever.yy",
+    "name": "spr_greenswitch1",
+    "path": "sprites/spr_greenswitch1/spr_greenswitch1.yy",
   },
   "solid": true,
   "visible": true,
@@ -24,6 +24,7 @@
     {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_cannonlever","path":"objects/obj_cannonlever/obj_cannonlever.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_cannonlever","path":"objects/obj_cannonlever/obj_cannonlever.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":69,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_cannonlever","path":"objects/obj_cannonlever/obj_cannonlever.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"parent":{"name":"obj_cannonlever","path":"objects/obj_cannonlever/obj_cannonlever.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"levercount","tags":[],"resourceType":"GMObjectProperty",},

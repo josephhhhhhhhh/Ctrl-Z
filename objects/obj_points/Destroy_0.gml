@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1
+/// @DnDHash : 070A1FD0
+/// @DnDArgument : "soundid" "Collect_floppy_disk_new"
+/// @DnDSaveInfo : "soundid" "Collect_floppy_disk_new"
+audio_play_sound(Collect_floppy_disk_new, 0, 0);
+
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 59278B04

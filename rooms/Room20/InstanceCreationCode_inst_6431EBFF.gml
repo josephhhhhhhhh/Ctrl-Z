@@ -1,0 +1,2 @@
+cannonBad = true;
+spamMode = true;

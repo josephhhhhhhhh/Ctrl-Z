@@ -30,3 +30,11 @@ collisionSpeed = walkingspeed+2;
 /// @DnDVersion : 1
 /// @DnDHash : 7495C29A
 image_angle = 0;
+
+/// @DnDAction : YoYo Games.Instances.Set_Sprite
+/// @DnDVersion : 1
+/// @DnDHash : 25DD7CCF
+/// @DnDArgument : "spriteind" "spr_timetravellerwalkdown"
+/// @DnDSaveInfo : "spriteind" "spr_timetravellerwalkdown"
+sprite_index = spr_timetravellerwalkdown;
+image_index = 0;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_lava",
-    "path": "sprites/spr_lava/spr_lava.yy",
+    "name": "spr_lavanew",
+    "path": "sprites/spr_lavanew/spr_lavanew.yy",
   },
   "solid": true,
   "visible": true,
@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Lava Tile Objects",
+    "path": "folders/Objects/Lava Tile Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_lava",

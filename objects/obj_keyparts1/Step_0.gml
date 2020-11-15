@@ -12,6 +12,14 @@ if(place_meeting(x,y,obj_timetraveller))
 	/// @DnDArgument : "var" "obj_timetraveller.keyParts"
 	obj_timetraveller.keyParts = obj_timetraveller.keyParts+1;
 
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
+	/// @DnDVersion : 1
+	/// @DnDHash : 0C63A5B3
+	/// @DnDParent : 16A27918
+	/// @DnDArgument : "soundid" "Crystal_Pick_Up_new"
+	/// @DnDSaveInfo : "soundid" "Crystal_Pick_Up_new"
+	audio_play_sound(Crystal_Pick_Up_new, 0, 0);
+
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 64FD9AAA

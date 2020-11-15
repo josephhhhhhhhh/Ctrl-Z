@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_sadpuff",
-    "path": "sprites/spr_sadpuff/spr_sadpuff.yy",
+    "name": "spr_Sad_Puff_Right",
+    "path": "sprites/spr_Sad_Puff_Right/spr_Sad_Puff_Right.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,8 +30,8 @@
     {"propertyId":{"name":"shootTears","path":"objects/obj_circlingangrypuff/obj_circlingangrypuff.yy",},"objectId":{"name":"obj_circlingangrypuff","path":"objects/obj_circlingangrypuff/obj_circlingangrypuff.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_circlingsadpuff",

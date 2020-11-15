@@ -1,46 +1,27 @@
-/// @DnDAction : YoYo Games.Drawing.Set_Font
-/// @DnDVersion : 1
-/// @DnDHash : 3960D749
-/// @DnDArgument : "font" "Font_cambria"
-/// @DnDSaveInfo : "font" "Font_cambria"
-draw_set_font(Font_cambria);
+draw_sprite_ext(icon_UIbar,0, 0, 702,  1,1,0,c_white,1) 
 
-/// @DnDAction : YoYo Games.Drawing.Draw_Value
-/// @DnDVersion : 1
-/// @DnDHash : 16CDE52F
-/// @DnDArgument : "x" "855"
-/// @DnDArgument : "y" "725"
-/// @DnDArgument : "caption" ""Time Reversals left: ""
-/// @DnDArgument : "var" "obj_timetraveller.currentInteractionCount"
-draw_text(855, 725, string("Time Reversals left: ") + string(obj_timetraveller.currentInteractionCount));
+draw_set_color(c_black)
+draw_set_font(Font_UI);
+draw_set_halign(fa_left)
 
-/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
-/// @DnDVersion : 1
-/// @DnDHash : 40ED63BD
-/// @DnDArgument : "x1" "1055"
-/// @DnDArgument : "y1" "725"
-/// @DnDArgument : "x2" "1310"
-/// @DnDArgument : "y2" "745"
-/// @DnDArgument : "value" "(obj_timetraveller.currentInteractionCount/obj_timetraveller.maxInteractionCount)*100"
-/// @DnDArgument : "backcol" "$FF000000"
-/// @DnDArgument : "mincol" "$FF0000FF"
-/// @DnDArgument : "maxcol" "$FF1ECC32"
-draw_healthbar(1055, 725, 1310, 745, (obj_timetraveller.currentInteractionCount/obj_timetraveller.maxInteractionCount)*100, $FF000000 & $FFFFFF, $FF0000FF & $FFFFFF, $FF1ECC32 & $FFFFFF, 0, (($FF000000>>24) != 0), (($FFFFFFFF>>24) != 0));
+draw_text(57, hudy+2, string("Lvl " + string_digits(room_get_name(room))));
 
-/// @DnDAction : YoYo Games.Drawing.Draw_Value
-/// @DnDVersion : 1
-/// @DnDHash : 7169FF48
-/// @DnDArgument : "x" "500"
-/// @DnDArgument : "y" "725"
-/// @DnDArgument : "caption" ""Time taken: ""
-/// @DnDArgument : "var" "timekeeper/60"
-draw_text(500, 725, string("Time taken: ") + string(timekeeper/60));
+draw_text(745, hudy+2, string("Time  Reversals: ") + string(obj_timetraveller.currentInteractionCount));
+draw_healthbar(1075, hudy, 1320, hudy+30, (obj_timetraveller.currentInteractionCount/obj_timetraveller.maxInteractionCount)*100, $FF000000 & $FFFFFF, $FF0000FF & $FFFFFF, $FF1ECC32 & $FFFFFF, 0, (($FF000000>>24) != 0), (($FFFFFFFF>>24) != 0));
 
-/// @DnDAction : YoYo Games.Drawing.Draw_Value
-/// @DnDVersion : 1
-/// @DnDHash : 7E36CACF
-/// @DnDArgument : "x" "200"
-/// @DnDArgument : "y" "725"
-/// @DnDArgument : "caption" ""Points Collected: ""
-/// @DnDArgument : "var" "(60 -timekeeper/60)*100 + obj_timetraveller.pointsCollected*1000"
-draw_text(200, 725, string("Points Collected: ") + string((60 -timekeeper/60)*100 + obj_timetraveller.pointsCollected*1000));
+draw_sprite_ext(icon_time,0, 505, hudy-5,  0.65,0.65,0,c_white,1)
+draw_text(570, hudy+2, string(round(timekeeper/3600)) + string(" m  ") + string(round(timekeeper/60)%60)+string(" s"));
+
+
+//for (var i = 0; i < 3; i ++ ){
+//	draw_sprite_ext(spr_keypart,0, 200 + (40*i), 725 , 1, 1 ,0,c_white,1)
+//}
+	
+if (obj_timetraveller.pointsCollected > 0){
+	for (var i = 0; i < obj_timetraveller.pointsCollected; i ++ ){
+		draw_sprite_ext(spr_points,0, 280 + (55*i), hudy-5,  0.65,0.65,0,c_white,1)}
+}
+
+if  instance_exists(obj_keythatopensall) and (obj_keythatopensall.pickedUpByTimeTraveller){
+	draw_sprite_ext(spr_keythatopensall,0, 240, hudy+15,  0.7,0.7,0,c_white,1)
+}

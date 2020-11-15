@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_unrewindablebox",
-    "path": "sprites/spr_unrewindablebox/spr_unrewindablebox.yy",
+    "name": "spr_glitch_box",
+    "path": "sprites/spr_glitch_box/spr_glitch_box.yy",
   },
   "solid": true,
   "visible": true,
@@ -25,7 +25,6 @@
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_endportal","path":"objects/obj_endportal/obj_endportal.yy",},"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_cannon","path":"objects/obj_cannon/obj_cannon.yy",},"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"parent":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],

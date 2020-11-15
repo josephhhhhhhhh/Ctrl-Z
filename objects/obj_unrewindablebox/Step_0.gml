@@ -19,17 +19,17 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 		/// @DnDVersion : 1
 		/// @DnDHash : 2884E0E6
 		/// @DnDParent : 6DC67580
-		/// @DnDArgument : "key" "vk_left"
+		/// @DnDArgument : "key" "vk_left || ord("A")"
 		var l2884E0E6_0;
-		l2884E0E6_0 = keyboard_check(vk_left);
+		l2884E0E6_0 = keyboard_check(vk_left || ord("A"));
 		if (l2884E0E6_0)
 		{
 			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
 			/// @DnDHash : 5AC6DB17
 			/// @DnDParent : 2884E0E6
-			/// @DnDArgument : "expr" "obj_timetraveller.x > (x +40)"
-			if(obj_timetraveller.x > (x +40))
+			/// @DnDArgument : "expr" "obj_timetraveller.x > (x +32)"
+			if(obj_timetraveller.x > (x +32))
 			{
 				/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 				/// @DnDVersion : 1
@@ -43,13 +43,29 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 				/// @DnDVersion : 1
 				/// @DnDHash : 28C53130
 				/// @DnDParent : 5AC6DB17
-				/// @DnDArgument : "expr" "place_meeting(x-sprite_width/2,y, instance_position(x-sprite_width/2,y,obj_walls) ) || place_meeting(x-sprite_width/2,y, instance_position(x-sprite_width/2,y,obj_door) )"
-				if(place_meeting(x-sprite_width/2,y, instance_position(x-sprite_width/2,y,obj_walls) ) || place_meeting(x-sprite_width/2,y, instance_position(x-sprite_width/2,y,obj_door) ))
+				/// @DnDArgument : "expr" "position_meeting(x-33,y, obj_walls) || position_meeting(x-33,y, obj_door) || position_meeting(x-33,y-39, obj_door) || position_meeting(x-33,y+39, obj_walls) || position_meeting(x-33,y, obj_unrewindabledoor) || position_meeting(x-33,y-39, obj_unrewindabledoor) || position_meeting(x-33,y, obj_switch) || position_meeting(x-33,y+40, obj_switch) || position_meeting(x-33,y-39, obj_switch)  || place_meeting(x-33,y,obj_unrewindabledoor)"
+				if(position_meeting(x-33,y, obj_walls) || position_meeting(x-33,y, obj_door) || position_meeting(x-33,y-39, obj_door) || position_meeting(x-33,y+39, obj_walls) || position_meeting(x-33,y, obj_unrewindabledoor) || position_meeting(x-33,y-39, obj_unrewindabledoor) || position_meeting(x-33,y, obj_switch) || position_meeting(x-33,y+40, obj_switch) || position_meeting(x-33,y-39, obj_switch)  || place_meeting(x-33,y,obj_unrewindabledoor))
 				{
 					/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 2608F098
 					/// @DnDParent : 28C53130
+					/// @DnDArgument : "expr" "obj_timetraveller.xprevious"
+					/// @DnDArgument : "var" "obj_timetraveller.x"
+					obj_timetraveller.x = obj_timetraveller.xprevious;
+				}
+			
+				/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 3B5C798E
+				/// @DnDParent : 5AC6DB17
+				/// @DnDArgument : "expr" "place_meeting(x-7,y,obj_cannon)"
+				if(place_meeting(x-7,y,obj_cannon))
+				{
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 3ECD19EB
+					/// @DnDParent : 3B5C798E
 					/// @DnDArgument : "expr" "obj_timetraveller.xprevious"
 					/// @DnDArgument : "var" "obj_timetraveller.x"
 					obj_timetraveller.x = obj_timetraveller.xprevious;
@@ -68,47 +84,81 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
-		/// @DnDHash : 19B66C56
+		/// @DnDHash : 593B8737
 		/// @DnDParent : 6DC67580
-		/// @DnDArgument : "expr" "position_meeting(x,y,obj_lava)"
-		if(position_meeting(x,y,obj_lava))
+		/// @DnDArgument : "expr" "instance_exists(obj_lava)"
+		if(instance_exists(obj_lava))
 		{
-			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
-			/// @DnDHash : 4E5C1335
-			/// @DnDParent : 19B66C56
-			/// @DnDArgument : "expr" "true"
-			/// @DnDArgument : "var" "passthrough"
-			passthrough = true;
+			/// @DnDHash : 6D305575
+			/// @DnDParent : 593B8737
+			/// @DnDArgument : "expr" "position_meeting(x,y,obj_lavahitbox)"
+			if(position_meeting(x,y,obj_lavahitbox))
+			{
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 1085164E
+				/// @DnDParent : 6D305575
+				/// @DnDArgument : "expr" "true"
+				/// @DnDArgument : "var" "passthrough"
+				passthrough = true;
+			
+				/// @DnDAction : YoYo Games.Instances.Set_Sprite
+				/// @DnDVersion : 1
+				/// @DnDHash : 3266D857
+				/// @DnDParent : 6D305575
+				/// @DnDArgument : "imageind_relative" "1"
+				/// @DnDArgument : "spriteind" "spr_glitch_lavaBox"
+				/// @DnDSaveInfo : "spriteind" "spr_glitch_lavaBox"
+				sprite_index = spr_glitch_lavaBox;
+				image_index += 0;
+			}
 		}
 	
 		/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
 		/// @DnDVersion : 1
 		/// @DnDHash : 0C97B85D
 		/// @DnDParent : 6DC67580
-		/// @DnDArgument : "key" "vk_down"
+		/// @DnDArgument : "key" "vk_down || ord("S")"
 		var l0C97B85D_0;
-		l0C97B85D_0 = keyboard_check(vk_down);
+		l0C97B85D_0 = keyboard_check(vk_down || ord("S"));
 		if (l0C97B85D_0)
 		{
 			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
 			/// @DnDHash : 2E8D2B2F
 			/// @DnDParent : 0C97B85D
-			/// @DnDArgument : "expr" "obj_timetraveller.y < (y - 40)"
-			if(obj_timetraveller.y < (y - 40))
+			/// @DnDArgument : "expr" "obj_timetraveller.y < (y - 32)"
+			if(obj_timetraveller.y < (y - 32))
 			{
 				/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1
 				/// @DnDHash : 03F630C2
 				/// @DnDParent : 2E8D2B2F
-				/// @DnDArgument : "expr" "position_meeting(x,y+sprite_width/2, instance_position(x,y+sprite_width/2,obj_walls) ) || position_meeting(x,y+sprite_width/2, instance_position(x,y+sprite_width/2,obj_door) )"
-				if(position_meeting(x,y+sprite_width/2, instance_position(x,y+sprite_width/2,obj_walls) ) || position_meeting(x,y+sprite_width/2, instance_position(x,y+sprite_width/2,obj_door) ))
+				/// @DnDArgument : "expr" "position_meeting(x,y+40, obj_walls) || position_meeting(x,y+40, obj_door) || position_meeting(x-33,y+40, obj_walls) || position_meeting(x-33,y+40, obj_door) || position_meeting(x+33,y+40, obj_walls) || position_meeting(x+33,y+40, obj_door) || position_meeting(x,y+40, obj_switch) || position_meeting(x-33,y+40, obj_switch) || position_meeting(x+33,y+40, obj_switch)  || place_meeting(x,y-40,obj_unrewindabledoor)"
+				if(position_meeting(x,y+40, obj_walls) || position_meeting(x,y+40, obj_door) || position_meeting(x-33,y+40, obj_walls) || position_meeting(x-33,y+40, obj_door) || position_meeting(x+33,y+40, obj_walls) || position_meeting(x+33,y+40, obj_door) || position_meeting(x,y+40, obj_switch) || position_meeting(x-33,y+40, obj_switch) || position_meeting(x+33,y+40, obj_switch)  || place_meeting(x,y-40,obj_unrewindabledoor))
 				{
 					/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 58C88701
 					/// @DnDParent : 03F630C2
+					/// @DnDArgument : "expr" "obj_timetraveller.yprevious"
+					/// @DnDArgument : "var" "obj_timetraveller.y"
+					obj_timetraveller.y = obj_timetraveller.yprevious;
+				}
+			
+				/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 25984958
+				/// @DnDParent : 2E8D2B2F
+				/// @DnDArgument : "expr" "place_meeting(x,y+7,obj_cannon)"
+				if(place_meeting(x,y+7,obj_cannon))
+				{
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 784E5532
+					/// @DnDParent : 25984958
 					/// @DnDArgument : "expr" "obj_timetraveller.yprevious"
 					/// @DnDArgument : "var" "obj_timetraveller.y"
 					obj_timetraveller.y = obj_timetraveller.yprevious;
@@ -136,17 +186,17 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 		/// @DnDVersion : 1
 		/// @DnDHash : 58C6F6AA
 		/// @DnDParent : 6DC67580
-		/// @DnDArgument : "key" "vk_up"
+		/// @DnDArgument : "key" "vk_up || ord("W")"
 		var l58C6F6AA_0;
-		l58C6F6AA_0 = keyboard_check(vk_up);
+		l58C6F6AA_0 = keyboard_check(vk_up || ord("W"));
 		if (l58C6F6AA_0)
 		{
 			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
 			/// @DnDHash : 5299923A
 			/// @DnDParent : 58C6F6AA
-			/// @DnDArgument : "expr" "obj_timetraveller.y > (y + 40)"
-			if(obj_timetraveller.y > (y + 40))
+			/// @DnDArgument : "expr" "obj_timetraveller.y > (y + 32)"
+			if(obj_timetraveller.y > (y + 32))
 			{
 				/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 				/// @DnDVersion : 1
@@ -161,13 +211,29 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 				/// @DnDVersion : 1
 				/// @DnDHash : 3D51045B
 				/// @DnDParent : 5299923A
-				/// @DnDArgument : "expr" "place_meeting(x,y,obj_walls)"
-				if(place_meeting(x,y,obj_walls))
+				/// @DnDArgument : "expr" "position_meeting(x,y-39, obj_walls) || position_meeting(x,y-39, obj_door) || position_meeting(x-33,y-39, obj_walls) || position_meeting(x-33,y-39, obj_door) || position_meeting(x+33,y-39, obj_walls) || position_meeting(x+33,y-39, obj_door) || position_meeting(x,y-39, obj_unrewindabledoor) || position_meeting(x+33,y-39, obj_unrewindabledoor) || position_meeting(x-33,y-39, obj_unrewindabledoor)  ||place_meeting(x,y-40,obj_unrewindabledoor)"
+				if(position_meeting(x,y-39, obj_walls) || position_meeting(x,y-39, obj_door) || position_meeting(x-33,y-39, obj_walls) || position_meeting(x-33,y-39, obj_door) || position_meeting(x+33,y-39, obj_walls) || position_meeting(x+33,y-39, obj_door) || position_meeting(x,y-39, obj_unrewindabledoor) || position_meeting(x+33,y-39, obj_unrewindabledoor) || position_meeting(x-33,y-39, obj_unrewindabledoor)  ||place_meeting(x,y-40,obj_unrewindabledoor))
 				{
 					/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 014D4DFC
 					/// @DnDParent : 3D51045B
+					/// @DnDArgument : "expr" "obj_timetraveller.yprevious"
+					/// @DnDArgument : "var" "obj_timetraveller.y"
+					obj_timetraveller.y = obj_timetraveller.yprevious;
+				}
+			
+				/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 52D13F30
+				/// @DnDParent : 5299923A
+				/// @DnDArgument : "expr" "place_meeting(x,y-7,obj_cannon)"
+				if(place_meeting(x,y-7,obj_cannon))
+				{
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 277C56FD
+					/// @DnDParent : 52D13F30
 					/// @DnDArgument : "expr" "obj_timetraveller.yprevious"
 					/// @DnDArgument : "var" "obj_timetraveller.y"
 					obj_timetraveller.y = obj_timetraveller.yprevious;
@@ -188,24 +254,24 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 		/// @DnDVersion : 1
 		/// @DnDHash : 5E0B5F86
 		/// @DnDParent : 6DC67580
-		/// @DnDArgument : "key" "vk_right"
+		/// @DnDArgument : "key" "vk_right || ord("D")"
 		var l5E0B5F86_0;
-		l5E0B5F86_0 = keyboard_check(vk_right);
+		l5E0B5F86_0 = keyboard_check(vk_right || ord("D"));
 		if (l5E0B5F86_0)
 		{
 			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
 			/// @DnDHash : 10B59A1E
 			/// @DnDParent : 5E0B5F86
-			/// @DnDArgument : "expr" "obj_timetraveller.x < (x - 40)"
-			if(obj_timetraveller.x < (x - 40))
+			/// @DnDArgument : "expr" "obj_timetraveller.x < (x - 32)"
+			if(obj_timetraveller.x < (x - 32))
 			{
 				/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1
 				/// @DnDHash : 6D487C72
 				/// @DnDParent : 10B59A1E
-				/// @DnDArgument : "expr" "position_meeting(x+sprite_width/2+1,y, instance_position(x+sprite_width/2+1,y,obj_walls) ) || position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_door))"
-				if(position_meeting(x+sprite_width/2+1,y, instance_position(x+sprite_width/2+1,y,obj_walls) ) || position_meeting(x+sprite_width/2,y, instance_position(x+sprite_width/2,y,obj_door)))
+				/// @DnDArgument : "expr" "position_meeting(x+33,y, obj_walls) || position_meeting(x+33,y, obj_door) || position_meeting(x+33,y-39, obj_door) || position_meeting(x+33,y+39, obj_walls) || position_meeting(x+33,y, obj_unrewindabledoor) || position_meeting(x+33,y-39, obj_door) || position_meeting(x+33,y, obj_unrewindabledoor) || position_meeting(x+33,y-39, obj_unrewindabledoor) || position_meeting(x+33,y+39, obj_unrewindabledoor) ||place_meeting(x+33,y,obj_unrewindabledoor)"
+				if(position_meeting(x+33,y, obj_walls) || position_meeting(x+33,y, obj_door) || position_meeting(x+33,y-39, obj_door) || position_meeting(x+33,y+39, obj_walls) || position_meeting(x+33,y, obj_unrewindabledoor) || position_meeting(x+33,y-39, obj_door) || position_meeting(x+33,y, obj_unrewindabledoor) || position_meeting(x+33,y-39, obj_unrewindabledoor) || position_meeting(x+33,y+39, obj_unrewindabledoor) ||place_meeting(x+33,y,obj_unrewindabledoor))
 				{
 					/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 					/// @DnDVersion : 1
@@ -218,6 +284,22 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 					/// @DnDVersion : 1
 					/// @DnDHash : 7FC92125
 					/// @DnDParent : 6D487C72
+					/// @DnDArgument : "expr" "obj_timetraveller.xprevious"
+					/// @DnDArgument : "var" "obj_timetraveller.x"
+					obj_timetraveller.x = obj_timetraveller.xprevious;
+				}
+			
+				/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 3A0AA958
+				/// @DnDParent : 10B59A1E
+				/// @DnDArgument : "expr" "place_meeting(x+7,y,obj_cannon) "
+				if(place_meeting(x+7,y,obj_cannon) )
+				{
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 0D795F75
+					/// @DnDParent : 3A0AA958
 					/// @DnDArgument : "expr" "obj_timetraveller.xprevious"
 					/// @DnDArgument : "var" "obj_timetraveller.x"
 					obj_timetraveller.x = obj_timetraveller.xprevious;
@@ -253,13 +335,28 @@ if(place_meeting(x, y, obj_timetraveller) || place_meeting(x+2, y+2, obj_timetra
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
 /// @DnDHash : 5FF1012C
-else
+/// @DnDDisabled : 1
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 33CDD5E5
+/// @DnDDisabled : 1
+/// @DnDParent : 5FF1012C
+/// @DnDArgument : "expr" "5"
+/// @DnDArgument : "var" "obj_timetraveller.walkingspeed"
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 0D1434DD
+/// @DnDArgument : "expr" "!position_meeting(x,y,obj_lavahitbox)"
+if(!position_meeting(x,y,obj_lavahitbox))
 {
-	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
-	/// @DnDHash : 33CDD5E5
-	/// @DnDParent : 5FF1012C
-	/// @DnDArgument : "expr" "5"
-	/// @DnDArgument : "var" "obj_timetraveller.walkingspeed"
-	obj_timetraveller.walkingspeed = 5;
+	/// @DnDHash : 4D0B8BB8
+	/// @DnDParent : 0D1434DD
+	/// @DnDArgument : "imageind_relative" "1"
+	/// @DnDArgument : "spriteind" "spr_glitch_box"
+	/// @DnDSaveInfo : "spriteind" "spr_glitch_box"
+	sprite_index = spr_glitch_box;
+	image_index += 0;
 }

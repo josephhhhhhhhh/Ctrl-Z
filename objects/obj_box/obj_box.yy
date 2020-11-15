@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_box",
-    "path": "sprites/spr_box/spr_box.yy",
+    "name": "spr_boxnew",
+    "path": "sprites/spr_boxnew/spr_boxnew.yy",
   },
   "solid": true,
   "visible": true,
@@ -24,8 +24,13 @@
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_portalblocker","path":"objects/obj_portalblocker/obj_portalblocker.yy",},"parent":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_unrewindabledoor","path":"objects/obj_unrewindabledoor/obj_unrewindabledoor.yy",},"parent":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"parent":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_unrewindablebox","path":"objects/obj_unrewindablebox/obj_unrewindablebox.yy",},"parent":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [],
+  "properties": [
+    {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"tempCount","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",

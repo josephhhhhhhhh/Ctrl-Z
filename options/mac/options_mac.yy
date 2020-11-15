@@ -18,7 +18,7 @@
   "option_mac_enable_retina": false,
   "option_mac_scale": 0,
   "option_mac_texture_page": "2048x2048",
-  "option_mac_build_app_store": false,
+  "option_mac_build_app_store": true,
   "option_mac_allow_incoming_network": false,
   "option_mac_allow_outgoing_network": false,
   "option_mac_app_category": "Games",

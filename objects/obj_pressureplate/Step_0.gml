@@ -166,3 +166,71 @@ if(!isTriggered && instance_exists(obj_angrypuff))
 	/// @DnDArgument : "var" "obj_angrypuff.alternateOn"
 	obj_angrypuff.alternateOn = true;
 }
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 3FCC818C
+/// @DnDArgument : "expr" "isTriggered"
+if(isTriggered)
+{
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 0F7865FA
+	/// @DnDParent : 3FCC818C
+	/// @DnDArgument : "spriteind" "spr_pressure_pressed"
+	/// @DnDSaveInfo : "spriteind" "spr_pressure_pressed"
+	sprite_index = spr_pressure_pressed;
+	image_index = 0;
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 34856548
+/// @DnDArgument : "expr" "!isTriggered"
+if(!isTriggered)
+{
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 12E534AB
+	/// @DnDParent : 34856548
+	/// @DnDArgument : "spriteind" "spr_pressure"
+	/// @DnDSaveInfo : "spriteind" "spr_pressure"
+	sprite_index = spr_pressure;
+	image_index = 0;
+}
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4CCAEB42
+/// @DnDArgument : "expr" "false"
+/// @DnDArgument : "var" "changeInPP"
+changeInPP = false;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 3DAFF6DE
+/// @DnDArgument : "expr" "currPressureState"
+/// @DnDArgument : "var" "prevPressureState"
+prevPressureState = currPressureState;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 17C0F0E4
+/// @DnDArgument : "expr" "isTriggered"
+/// @DnDArgument : "var" "currPressureState"
+currPressureState = isTriggered;
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 4306C0C2
+/// @DnDArgument : "expr" "(currPressureState !=prevPressureState)"
+if((currPressureState !=prevPressureState))
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 54C6D341
+	/// @DnDParent : 4306C0C2
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "changeInPP"
+	changeInPP = true;
+}

@@ -18,13 +18,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":true,"eventNum":1,"eventType":5,"collisionObjectId":null,"parent":{"name":"obj_anykey","path":"objects/obj_anykey/obj_anykey.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_anykey","path":"objects/obj_anykey/obj_anykey.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":1,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_anykey","path":"objects/obj_anykey/obj_anykey.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu Options",
-    "path": "folders/Objects/Menu Options.yy",
+    "name": "Menus",
+    "path": "folders/Objects/Menus.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_anykey",

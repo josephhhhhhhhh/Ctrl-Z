@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_portalblocker",
-    "path": "sprites/spr_portalblocker/spr_portalblocker.yy",
+    "name": "spr_Portal_Blocker",
+    "path": "sprites/spr_Portal_Blocker/spr_Portal_Blocker.yy",
   },
   "solid": true,
   "visible": true,

@@ -3,7 +3,7 @@
     "name": "spr_angrypuff",
     "path": "sprites/spr_angrypuff/spr_angrypuff.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -23,6 +23,7 @@
   "eventList": [
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_circlingangrypuff","path":"objects/obj_circlingangrypuff/obj_circlingangrypuff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_circlingangrypuff","path":"objects/obj_circlingangrypuff/obj_circlingangrypuff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"parent":{"name":"obj_circlingangrypuff","path":"objects/obj_circlingangrypuff/obj_circlingangrypuff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":3,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"transformed","tags":[],"resourceType":"GMObjectProperty",},
@@ -33,8 +34,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_circlingangrypuff",

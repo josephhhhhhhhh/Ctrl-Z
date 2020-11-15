@@ -1,0 +1,2 @@
+doorClosed = false;
+leftFacingOutward = true;

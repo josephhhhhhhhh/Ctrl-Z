@@ -27,4 +27,12 @@ if(distance_to_object(obj_timetraveller) < 15 && self.projectileready)
 	/// @DnDArgument : "expr" "levercount+1"
 	/// @DnDArgument : "var" "levercount"
 	levercount = levercount+1;
+
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
+	/// @DnDVersion : 1
+	/// @DnDHash : 68C2E703
+	/// @DnDParent : 77760CDD
+	/// @DnDArgument : "soundid" "cannonball_new"
+	/// @DnDSaveInfo : "soundid" "cannonball_new"
+	audio_play_sound(cannonball_new, 0, 0);
 }

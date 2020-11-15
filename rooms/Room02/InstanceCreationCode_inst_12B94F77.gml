@@ -1,0 +1,2 @@
+leftSideDoor=true;
+doorClosed = false;

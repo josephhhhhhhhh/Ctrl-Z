@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_timetraveller",
-    "path": "sprites/spr_timetraveller/spr_timetraveller.yy",
+    "name": "spr_timetravellerwalkdown",
+    "path": "sprites/spr_timetravellerwalkdown/spr_timetravellerwalkdown.yy",
   },
   "solid": true,
   "visible": true,
@@ -27,9 +27,15 @@
     {"isDnD":true,"eventNum":40,"eventType":5,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":32,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":true,"eventNum":82,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_switchForCannons","path":"objects/obj_switchForCannons/obj_switchForCannons.yy",},"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":87,"eventType":5,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":65,"eventType":5,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":8,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":83,"eventType":5,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":68,"eventType":5,"collisionObjectId":null,"parent":{"name":"obj_timetraveller","path":"objects/obj_timetraveller/obj_timetraveller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":3,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hasTouchedLava","tags":[],"resourceType":"GMObjectProperty",},

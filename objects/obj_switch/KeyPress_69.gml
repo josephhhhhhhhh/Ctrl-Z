@@ -5,13 +5,13 @@
 /// @DnDArgument : "value" "true"
 if(distance_to_object(obj_timetraveller) < 15  == true)
 {
-	/// @DnDAction : YoYo Games.Instances.Sprite_Rotate
+	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
-	/// @DnDHash : 27C469FD
+	/// @DnDHash : 22A0125B
 	/// @DnDParent : 36B6E92B
-	/// @DnDArgument : "angle" "180"
-	/// @DnDArgument : "angle_relative" "1"
-	image_angle += 180;
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "hasBeenPressedOnce"
+	hasBeenPressedOnce = true;
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -28,6 +28,30 @@ if(distance_to_object(obj_timetraveller) < 15  == true)
 	/// @DnDArgument : "expr" "true"
 	/// @DnDArgument : "var" "switchPressed"
 	switchPressed = true;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 1E820066
+	/// @DnDParent : 36B6E92B
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "switchHasBeenPressedOnce"
+	switchHasBeenPressedOnce = true;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 3F14369A
+	/// @DnDParent : 36B6E92B
+	/// @DnDArgument : "expr" "false"
+	/// @DnDArgument : "var" "activatedByRewind"
+	activatedByRewind = false;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 10F4EFBF
+	/// @DnDParent : 36B6E92B
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "activatedByTouch"
+	activatedByTouch = true;
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

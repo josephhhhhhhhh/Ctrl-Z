@@ -1,5 +1,20 @@
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
+/// @DnDHash : 68ECC5D9
+/// @DnDArgument : "expr" "obj_pressureplate.changeInPP"
+if(obj_pressureplate.changeInPP)
+{
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
+	/// @DnDVersion : 1
+	/// @DnDHash : 6400C368
+	/// @DnDParent : 68ECC5D9
+	/// @DnDArgument : "soundid" "Door_Open_new"
+	/// @DnDSaveInfo : "soundid" "Door_Open_new"
+	audio_play_sound(Door_Open_new, 0, 0);
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
 /// @DnDHash : 614220BD
 /// @DnDArgument : "expr" "obj_pressureplate.isTriggered"
 if(obj_pressureplate.isTriggered)
